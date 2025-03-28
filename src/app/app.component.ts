@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { UserComponent } from './components/user/user.component';
+import { PostComponent } from './components/post/post.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, UserComponent, PostComponent, CommentComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angular-twitter-clone';
+  selectedUserId: number = 1; // Default user ID
+  selectedPostId: number | undefined;
+
+  onUserChanged(userId: number): void {
+    this.selectedUserId = userId;
+  }
+
+  onPostSelected(postId: number): void {
+    this.selectedPostId = postId;
+  }
 }
