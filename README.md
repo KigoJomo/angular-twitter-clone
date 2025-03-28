@@ -1,54 +1,8 @@
-# Angular Twitter Clone
-
-A simplified Twitter-like application built with Angular that consumes the JSONPlaceholder API to display users, posts, and comments in a clean, responsive interface.
-
-## Features
-
-- **User Selection**: Browse through a list of users
-- **Posts Display**: View posts from the selected user
-- **Comments View**: See comments associated with each post
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean interface built with TailwindCSS and Material Symbols
-
-## Technologies Used
-
-- **Angular 19**: Modern Angular framework with standalone components
-- **TailwindCSS**: Utility-first CSS framework for styling
-- **RxJS**: Reactive programming library for handling asynchronous operations
-- **JSONPlaceholder API**: Mock REST API for testing and prototyping
-
-## Project Structure
-
-```
-src/
-  app/
-    components/
-      user/       # User selection component
-      post/       # Post display component
-      comment/    # Comment display component
-    services/
-      api.service.ts  # Service for API communication
-```
-
-## Development Setup
+# AngularTwitterClone
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm (v8 or higher)
-
-### Installation
-
-1. Clone the repository
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-### Development server
+## Development server
 
 To start a local development server, run:
 
@@ -57,6 +11,20 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
 
 ## Building
 
@@ -76,13 +44,15 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
-## API Endpoints
+## Running end-to-end tests
 
-This project uses the following JSONPlaceholder API endpoints:
+For end-to-end (e2e) testing, run:
 
-- **Users**: `https://jsonplaceholder.typicode.com/users`
-- **Posts**: `https://jsonplaceholder.typicode.com/posts` and `https://jsonplaceholder.typicode.com/posts?userId={id}`
-- **Comments**: `https://jsonplaceholder.typicode.com/comments` and `https://jsonplaceholder.typicode.com/comments?postId={id}`
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 

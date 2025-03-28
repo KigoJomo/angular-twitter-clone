@@ -12,7 +12,7 @@ import { ApiService, User } from '../../services/api.service';
 })
 export class UserComponent implements OnInit {
   users: User[] = [];
-  @Input() selectedUserId: number = 1; // Default to user with ID 1
+  @Input() selectedUserId: number = 1;
 
   @Output() userChanged = new EventEmitter<number>();
 

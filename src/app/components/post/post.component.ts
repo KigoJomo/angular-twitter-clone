@@ -36,7 +36,6 @@ export class PostComponent implements OnChanges {
       next: (data) => {
         this.posts = data;
 
-        // Select the first post by default
         if (this.posts.length > 0) {
           this.selectPost(this.posts[0].id);
         } else {

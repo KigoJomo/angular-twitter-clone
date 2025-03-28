@@ -7,12 +7,12 @@ import { CommentComponent } from './components/comment/comment.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, PostComponent, CommentComponent],
+  imports: [UserComponent, PostComponent, CommentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  selectedUserId: number = 1; // Default user ID
+  selectedUserId: number = 1;
   selectedPostId: number | undefined;
 
   onUserChanged(userId: number): void {
